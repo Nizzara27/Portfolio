@@ -1,11 +1,12 @@
-'use client'
+import {Admin} from './Admin'
 
-import config from '@/sanity.config';
-import { NextStudio } from 'next-sanity/studio';
+// Ensures the Studio route is statically generated
+export const dynamic = 'force-static'
 
+// Set the right `viewport`, `robots` and `referer` meta tags
+export {metadata} from 'next-sanity/studio/metadata'
+export {viewport} from 'next-sanity/studio/viewport'
 
 export default function AdminPage() {
-    
-    return <NextStudio config={config} />
-
+  return <Admin />
 }

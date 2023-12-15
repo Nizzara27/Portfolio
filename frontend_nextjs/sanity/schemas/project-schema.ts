@@ -2,7 +2,7 @@ const project = {
 
     name: "project",
 
-    title:  "Projects",
+    title: "Projects",
 
     type: 'document',
 

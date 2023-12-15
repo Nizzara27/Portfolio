@@ -1,7 +1,7 @@
 import { defineConfig } from 'sanity';
 import { deskTool } from "sanity/desk";
-import project from './sanity/schemas/project-schema';
-//An improvement that I could make is creating a barrel file that stores all the schemas to reduce the importing
+import schemas from './sanity/schemas'
+
 
 const config = defineConfig ({
     
@@ -13,11 +13,13 @@ const config = defineConfig ({
 
     apiVersion: "2023-12-14",
 
+    useCdn: true,
+    
     basePath: "/admin",
 
     plugins: [deskTool()],
 
-    schema: { types: [project]}
+    schema: { types: schemas }
 })
 
 export default config;
