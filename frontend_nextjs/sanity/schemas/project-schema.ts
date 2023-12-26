@@ -1,62 +1,61 @@
 const project = {
+  name: "project",
 
-    name: "project",
+  title: "Projects",
 
-    title: "Projects",
+  type: "document",
 
-    type: 'document',
+  fields: [
+    {
+      name: "name",
 
-    fields: [
+      title: "Name",
+
+      type: "string",
+    },
+    {
+      name: "slug",
+
+      title: "Slug",
+
+      type: "slug",
+
+      options: { source: "name" },
+    },
+    {
+      name: "image",
+
+      title: "Image",
+
+      type: "image",
+
+      options: { hotspot: true },
+
+      fields: [
         {
-            name: 'name',
-
-            title: 'Name',
-
-            type: 'string'
+          name: "alt",
+          title: "Alt",
+          type: "string",
         },
-        {
-            name: 'slug',
+      ],
+    },
+    {
+      name: "url",
 
-            title: 'Slug',
+      title: "URL",
 
-            type: 'slug',
+      type: "url",
+    },
+    {
+      name: "content",
 
-            options: { source: 'name'}
-        },
-        {
-            name: 'image',
+      title: "Content",
 
-            title: 'Image',
+      type: "array",
 
-            type: 'image',
-
-            options: { hotspot: true },
-
-            fields: [
-                {
-                    name: "alt",
-                    title: 'Alt',
-                    type: 'string'
-                }
-            ]
-        },
-        {
-            name: 'url',
-
-            title: 'URL',
-
-            type: 'url'
-        },
-        {
-            name: 'content',
-
-            title: 'Content',
-
-            type: 'array',
-
-            of: [{ type: "block"}],
-        },
-    ],
+      of: [{ type: "block" }],
+    },
+  ],
 };
 
 export default project;
